@@ -1,4 +1,5 @@
 import 'package:day_01/Pages/Landing_page.dart';
+import 'package:day_01/Pages/Personal_Info_Page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

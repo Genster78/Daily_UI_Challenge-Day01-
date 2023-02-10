@@ -56,7 +56,7 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

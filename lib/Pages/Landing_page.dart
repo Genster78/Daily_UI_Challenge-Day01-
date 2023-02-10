@@ -1,4 +1,6 @@
+import 'package:day_01/Components/BackgroundIcons.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
+import 'package:day_01/background__icons_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
 
@@ -17,6 +19,66 @@ class _LandingPageState extends State<LandingPage> {
         child: Stack(
           children: [
             PageBackgroundColor(),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(height: 41),
+                        Icon(
+                          Background_Icons.note3,
+                          color: Color(0xFF9FD8CB).withOpacity(0.75),
+                          size: 131,
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(height: 63),
+                        Icon(
+                          Background_Icons.note2,
+                          color: Color(0xFF9FD8CB).withOpacity(0.75),
+                          size: 131,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 50,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Background_Icons.note1,
+                      color: Color(0xFF9FD8CB).withOpacity(0.75),
+                      size: 131,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Background_Icons.mic,
+                      color: Color(0xFF9FD8CB).withOpacity(0.7),
+                      size: 131,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Background_Icons.note4,
+                      color: Color(0xFF9FD8CB),
+                      size: 131,
+                    ),
+                  ],
+                ),
+              ],
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(

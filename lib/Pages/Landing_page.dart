@@ -19,7 +19,7 @@ class _LandingPageState extends State<LandingPage> {
         child: Stack(
           children: [
             PageBackgroundColor(),
-            Column(
+            Column( 
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

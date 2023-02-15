@@ -1,4 +1,6 @@
+import 'package:day_01/Pages/Contact_Info.dart';
 import 'package:day_01/Pages/Landing_page.dart';
+import 'package:day_01/Pages/Performance.dart';
 import 'package:day_01/Pages/Personal_Info_Page.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Poppins',
       ),
-      home: PersonalInfomation(),
+      home: Performance(),
     );
   }
 }

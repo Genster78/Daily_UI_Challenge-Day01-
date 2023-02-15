@@ -1,5 +1,7 @@
 import 'package:day_01/Components/App_Bar.dart';
+import 'package:day_01/Components/Bottom_Button_Component.dart';
 import 'package:day_01/Components/InputFields.dart';
+import 'package:day_01/Components/ProgressBar.dart';
 import 'package:day_01/Components/ToggleButton.dart';
 import 'package:day_01/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +62,25 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                       hint: 'Enter your NIC number',
                       icons: CustomIcons.icon__person_),
                   SizedBox(height: 20),
-                  ToggleButton(title: 'Gender',),
+                  ToggleButton(
+                    title: 'Gender',
+                  ),
+                  SizedBox(height: 26,),
+                  InputField(
+                    inputname: 'About :',
+                    hint: 'Write about your self',
+                    icons: CustomIcons.icon__info_,
+                  ),
+                  SizedBox(height: 20,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 36),
+                    child: ProgressBar(),
+                  ),
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 40),
+                    child: BottomButton(buttonname: 'Next'),
+                  )
                 ],
               ),
             ),

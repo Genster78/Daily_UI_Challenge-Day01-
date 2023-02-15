@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class InputField extends StatelessWidget {
@@ -36,6 +38,7 @@ class InputField extends StatelessWidget {
             decoration: InputDecoration(
               border: UnderlineInputBorder(),
               hintText: hint,
+              hintStyle: TextStyle(color: Color(0xFF8E959B)),
               prefixIcon: Icon(icons, color: Color(0xFF0A2E36),)
             ),
           ),

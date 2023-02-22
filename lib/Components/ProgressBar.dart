@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-class ProgressBar extends StatefulWidget {
-  const ProgressBar({super.key});
+class StepProgressBar extends StatefulWidget {
+  const StepProgressBar({super.key});
 
   @override
-  State<ProgressBar> createState() => _ProgressBarState();
+  State<StepProgressBar> createState() => _StepProgressBarState();
 }
 
-class _ProgressBarState extends State<ProgressBar> {
+class _StepProgressBarState extends State<StepProgressBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: LinearProgressIndicator(
-        value: 0.33,
-        backgroundColor: Color(0xFFCACFD6),
-        color: Color(0xFF0A2E36),
-        
-      ),
+      child: StepProgressIndicator(totalSteps: 3)
     );
   }
 }

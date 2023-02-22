@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
+  step_progress_indicator: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -83,6 +84,9 @@ flutter:
     - family: Background_icons
       fonts:
        - asset: lib\Assets\Fonts\Background_Icons.ttf
+    - family: Progress_Icons
+      fonts:
+       - asset: lib\Assets\Icons\Progress_Icons.ttf
     - family: Fancy-Signature
       fonts:
        - asset: lib\Assets\Fonts\Fancy-Signature.otf

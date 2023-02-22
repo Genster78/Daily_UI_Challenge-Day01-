@@ -36,11 +36,15 @@ class InputField extends StatelessWidget {
           // Icon(icons),
           TextFormField(
             decoration: InputDecoration(
-              border: UnderlineInputBorder(),
-              hintText: hint,
-              hintStyle: TextStyle(color: Color(0xFF8E959B)),
-              prefixIcon: Icon(icons, color: Color(0xFF0A2E36),)
-            ),
+                border: UnderlineInputBorder(),
+                hintText: hint,
+                hintStyle: TextStyle(
+                  color: Color(0xFF8E959B),
+                ),
+                prefixIcon: Icon(
+                  icons,
+                  color: Color(0xFF0A2E36),
+                )),
           ),
         ],
       ),

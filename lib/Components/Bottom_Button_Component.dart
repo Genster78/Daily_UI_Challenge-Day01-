@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:ui';
 
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 import 'package:day_01/Pages/Personal_Info_Page.dart';
@@ -19,16 +20,20 @@ class BottomButton extends StatelessWidget {
         height: 40,
         width: double.infinity,
         decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.5),
-                spreadRadius: 1,
-                blurRadius: 10,
-                offset: Offset(3, 5),
-              ),
-            ],
-            color: Color(0xFF0A2E36),
-            borderRadius: BorderRadius.all(Radius.circular(10))),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.25),
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(3, 5),
+            ),
+          ],
+          
+          color: Color(0xFF0A2E36),
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          ),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

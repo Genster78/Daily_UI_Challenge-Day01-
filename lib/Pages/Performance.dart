@@ -1,9 +1,9 @@
 import 'package:day_01/Components/App_Bar.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
+import 'package:day_01/Components/File_Upload_Field.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
 import 'package:day_01/Pages/Contact_Info.dart';
 import 'package:day_01/Pages/Landing_page.dart';
-import 'package:day_01/custom_icons_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -50,6 +50,18 @@ class _PerformanceState extends State<Performance> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  FileUpload(
+                    title: 'Upload your photo :',
+                  ),
+                  SizedBox(
+                    height: 17,
+                  ),
+                  FileUpload(
+                    title: 'Upload performance video :',
                   ),
                   const Spacer(),
                   Padding(
@@ -164,7 +176,7 @@ class _PerformanceState extends State<Performance> {
     );
   }
 
-  Widget createDialog(BuildContext context) => CupertinoAlertDialog (
+  Widget createDialog(BuildContext context) => CupertinoAlertDialog(
         title: Text(
           'Finished ❤',
           style: TextStyle(fontSize: 22),

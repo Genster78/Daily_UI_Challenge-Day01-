@@ -110,7 +110,7 @@ class _PerformanceState extends State<Performance> {
                             ],
                           ),
                         ),
-                        StepProgressIndicator(
+                        const StepProgressIndicator(
                           totalSteps: 3,
                           currentStep: 3,
                           size: 6,
@@ -125,22 +125,26 @@ class _PerformanceState extends State<Performance> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
                     child: GestureDetector(
-                      // onTap: () {
-                      //   // print('Finished');
-                      //   AlertDialog alert = AlertDialog(
-                      //     content: Text('Finished'),
-                      //     contentTextStyle: TextStyle(
-                      //       color: Colors.black,
-                      //     ),
-                      //     actions: [],
-                      //   );
-                      //   showDialog(
-                      //     context: context,
-                      //     builder: (context) {
-                      //       return alert;
-                      //     },
-                      //   );
-                      // },
+                      onTap: () {
+                        AlertDialog alert = const AlertDialog(
+                          content: Text(
+                            'Thank You!',
+                            textAlign: TextAlign.center,
+                          ),
+                          contentTextStyle: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                          ),
+                          actions: [],
+                        );
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return alert;
+                          },
+                        );
+                      },
                       child: BottomButton(buttonname: 'Finish'),
                     ),
                   )

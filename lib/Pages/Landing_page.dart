@@ -21,7 +21,7 @@ class _LandingPageState extends State<LandingPage> {
       body: SafeArea(
         child: Stack(
           children: [
-            PageBackgroundColor(),
+            const PageBackgroundColor(),
             Column(
               children: [
                 Row(
@@ -124,7 +124,7 @@ class _LandingPageState extends State<LandingPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Container(
@@ -134,7 +134,7 @@ class _LandingPageState extends State<LandingPage> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
                     child: Text(

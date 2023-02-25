@@ -1,14 +1,16 @@
-import 'package:day_01/custom_icons_icons.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
-class TopAppBar extends StatefulWidget {
-  const TopAppBar({super.key});
+import 'package:day_01/custom_icons_icons.dart';
 
-  @override
-  State<TopAppBar> createState() => _TopAppBarState();
-}
+class TopAppBar extends StatelessWidget {
+  
+  TopAppBar({
+    Key? key,
+  }) : super(key: key);
 
-class _TopAppBarState extends State<TopAppBar> {
   @override
   Widget build(BuildContext context) {
     return Container(

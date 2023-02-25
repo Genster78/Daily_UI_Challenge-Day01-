@@ -2,6 +2,8 @@ import 'package:day_01/Components/App_Bar.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
 import 'package:day_01/Pages/Contact_Info.dart';
+import 'package:day_01/custom_icons_icons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
@@ -27,7 +29,7 @@ class _PerformanceState extends State<Performance> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
@@ -48,9 +50,7 @@ class _PerformanceState extends State<Performance> {
                       ),
                     ),
                   ),
-                  // SizedBox(height: 40,),
-
-                  Spacer(),
+                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(
                       bottom: 45,
@@ -124,26 +124,31 @@ class _PerformanceState extends State<Performance> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
-                    child: GestureDetector(
+                    child: InkWell(
                       onTap: () {
-                        AlertDialog alert = const AlertDialog(
-                          content: Text(
-                            'Thank You!',
-                            textAlign: TextAlign.center,
-                          ),
-                          contentTextStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                          ),
-                          actions: [],
-                        );
-                        showDialog(
+                        showCupertinoDialog(
                           context: context,
-                          builder: (context) {
-                            return alert;
-                          },
+                          builder: createDialog,
                         );
+
+                        // AlertDialog alert = const AlertDialog(
+                        //   content: Text(
+                        //     'Thank You!',
+                        //     textAlign: TextAlign.center,
+                        //   ),
+                        //   contentTextStyle: TextStyle(
+                        //     color: Colors.black,
+                        //     fontSize: 20,
+                        //     fontWeight: FontWeight.bold
+                        //   ),
+                        //   actions: [],
+                        // );
+                        // showDialog(
+                        //   context: context,
+                        //   builder: (context) {
+                        //     return alert;
+                        //   },
+                        // );
                       },
                       child: BottomButton(buttonname: 'Finish'),
                     ),
@@ -156,4 +161,25 @@ class _PerformanceState extends State<Performance> {
       ),
     );
   }
+
+  Widget createDialog(BuildContext context) => CupertinoAlertDialog(
+        title: Text(
+          'Something',
+          style: TextStyle(fontSize: 22),
+        ),
+        content: Text(
+          'Show',
+          style: TextStyle(fontSize: 15),
+        ),
+        actions: [
+          CupertinoDialogAction(
+            child: Text('Ok'),
+            onPressed: () => Navigator.pop(context),
+          ),
+          CupertinoDialogAction(
+            child: Text('Cancel'),
+            onPressed: () => Navigator.pop(context),
+          )
+        ],
+      );
 }

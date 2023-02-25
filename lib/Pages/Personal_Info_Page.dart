@@ -32,15 +32,17 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LandingPage()),
-                        );
-                      },
-                      child: TopAppBar()),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LandingPage(),
+                        ),
+                      );
+                    },
+                    child: TopAppBar(),
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Row(
@@ -178,7 +180,7 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
-                    child: GestureDetector(
+                    child: InkWell(
                         onTap: () {
                           Navigator.push(
                             context,

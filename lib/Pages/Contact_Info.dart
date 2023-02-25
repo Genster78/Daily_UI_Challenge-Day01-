@@ -29,7 +29,7 @@ class _ContactInfoState extends State<ContactInfo> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                GestureDetector(
+                InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
@@ -38,7 +38,7 @@ class _ContactInfoState extends State<ContactInfo> {
                         ),
                       );
                     },
-                    child: TopAppBar()),
+                    child: TopAppBar(),),
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Text(
@@ -158,7 +158,7 @@ class _ContactInfoState extends State<ContactInfo> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 40),
-                  child: GestureDetector(
+                  child: InkWell(
                     onTap: () {
                       Navigator.push(
                         context,

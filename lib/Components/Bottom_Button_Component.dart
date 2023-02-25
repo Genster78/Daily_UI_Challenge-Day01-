@@ -19,6 +19,14 @@ class BottomButton extends StatelessWidget {
         height: 40,
         width: double.infinity,
         decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.5),
+                spreadRadius: 1,
+                blurRadius: 10,
+                offset: Offset(3, 5),
+              ),
+            ],
             color: Color(0xFF0A2E36),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(

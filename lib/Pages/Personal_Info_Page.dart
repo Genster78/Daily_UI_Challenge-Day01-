@@ -185,7 +185,8 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ContactInfo()),
+                              builder: (context) => const ContactInfo(),
+                            ),
                           );
                         },
                         child: BottomButton(buttonname: 'Next')),

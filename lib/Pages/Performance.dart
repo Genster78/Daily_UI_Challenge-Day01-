@@ -2,6 +2,7 @@ import 'package:day_01/Components/App_Bar.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
 import 'package:day_01/Pages/Contact_Info.dart';
+import 'package:day_01/Pages/Landing_page.dart';
 import 'package:day_01/custom_icons_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -127,6 +128,7 @@ class _PerformanceState extends State<Performance> {
                     child: InkWell(
                       onTap: () {
                         showCupertinoDialog(
+                          barrierDismissible: true,
                           context: context,
                           builder: createDialog,
                         );
@@ -162,24 +164,28 @@ class _PerformanceState extends State<Performance> {
     );
   }
 
-  Widget createDialog(BuildContext context) => CupertinoAlertDialog(
+  Widget createDialog(BuildContext context) => CupertinoAlertDialog (
         title: Text(
-          'Something',
+          'Finished ❤',
           style: TextStyle(fontSize: 22),
         ),
         content: Text(
-          'Show',
-          style: TextStyle(fontSize: 15),
+          '🖕',
+          style: TextStyle(fontSize: 20),
         ),
         actions: [
           CupertinoDialogAction(
             child: Text('Ok'),
-            onPressed: () => Navigator.pop(context),
+            // onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LandingPage(),
+                ),
+              );
+            },
           ),
-          CupertinoDialogAction(
-            child: Text('Cancel'),
-            onPressed: () => Navigator.pop(context),
-          )
         ],
       );
 }

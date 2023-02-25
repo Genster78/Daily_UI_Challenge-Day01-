@@ -51,7 +51,7 @@ class _PerformanceState extends State<Performance> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   FileUpload(
@@ -178,16 +178,28 @@ class _PerformanceState extends State<Performance> {
 
   Widget createDialog(BuildContext context) => CupertinoAlertDialog(
         title: Text(
-          'Finished ❤',
+          'වැඩේ ඉවරයි 😏',
           style: TextStyle(fontSize: 22),
         ),
         content: Text(
-          '🖕',
-          style: TextStyle(fontSize: 20),
+          'පුරවල ඉවරනන් පලයන් හුත්තෝ. \n පකද බලන් ඉන්නෙ.. 😒',
+          style: TextStyle(fontSize: 15),
         ),
         actions: [
           CupertinoDialogAction(
-            child: Text('Ok'),
+            child: Text('බෑ හුත්තෝ 🖕'),
+            onPressed: () => Navigator.pop(context),
+            // onPressed: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => const LandingPage(),
+            //     ),
+            //   );
+            // },
+          ),
+          CupertinoDialogAction(
+            child: Text('යනව තමයි හුත්තෝ 🖕'),
             // onPressed: () => Navigator.pop(context),
             onPressed: () {
               Navigator.push(

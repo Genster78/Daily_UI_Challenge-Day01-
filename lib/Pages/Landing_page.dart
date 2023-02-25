@@ -1,8 +1,11 @@
 import 'package:day_01/Components/BackgroundIcons.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
+import 'package:day_01/Pages/Personal_Info_Page.dart';
 import 'package:day_01/background__icons_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
+
+import 'Personal_Info_Page.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -19,7 +22,7 @@ class _LandingPageState extends State<LandingPage> {
         child: Stack(
           children: [
             PageBackgroundColor(),
-            Column( 
+            Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,7 +50,9 @@ class _LandingPageState extends State<LandingPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -140,8 +145,19 @@ class _LandingPageState extends State<LandingPage> {
                   // Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
-                    child: BottomButton(buttonname: 'Sign-In'),
-                  )
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PersonalInfomation()),
+                        );
+                      },
+                      child: BottomButton(
+                        buttonname: 'Sign-In',
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -2,6 +2,8 @@ import 'package:day_01/Components/App_Bar.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
 import 'package:day_01/Components/InputFields.dart';
 import 'package:day_01/Components/ToggleButton.dart';
+import 'package:day_01/Pages/Contact_Info.dart';
+import 'package:day_01/Pages/Landing_page.dart';
 import 'package:day_01/custom_icons_icons.dart';
 import 'package:day_01/progress__icons_icons.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +32,15 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TopAppBar(),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LandingPage()),
+                        );
+                      },
+                      child: TopAppBar()),
                   Padding(
                     padding: const EdgeInsets.only(top: 30),
                     child: Row(
@@ -69,11 +79,6 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   SizedBox(
                     height: 26,
                   ),
-                  // InputField(
-                  //   inputname: 'About :',
-                  //   hint: 'Write about your self',
-                  //   icons: CustomIcons.icon__info_,
-                  // ),
                   Text(
                     'About :',
                     style: TextStyle(
@@ -99,12 +104,6 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   SizedBox(
                     height: 20,
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.symmetric(horizontal: 36),
-                  //   child: ProgressBar(),
-                  // ),
-                  // StepProgressBar(),
-                  // SizedBox(height: 20,),
                   Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(
@@ -117,15 +116,18 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 45,  right: 40),
+                              padding:
+                                  const EdgeInsets.only(left: 45, right: 40),
                               child: Icon(Progress_Icons.one_fill),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 40, right: 40),
+                              padding:
+                                  const EdgeInsets.only(left: 40, right: 40),
                               child: Icon(Progress_Icons.two),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 50, right: 40),
+                              padding:
+                                  const EdgeInsets.only(left: 50, right: 40),
                               child: Icon(Progress_Icons.three),
                             ),
                           ],
@@ -176,7 +178,15 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
-                    child: BottomButton(buttonname: 'Next'),
+                    child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ContactInfo()),
+                          );
+                        },
+                        child: BottomButton(buttonname: 'Next')),
                   )
                 ],
               ),

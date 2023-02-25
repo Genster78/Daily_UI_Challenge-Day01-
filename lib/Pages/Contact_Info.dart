@@ -2,6 +2,8 @@ import 'package:day_01/Components/App_Bar.dart';
 import 'package:day_01/Components/Bottom_Button_Component.dart';
 import 'package:day_01/Components/InputFields.dart';
 import 'package:day_01/Components/Pages_Background_Color.dart';
+import 'package:day_01/Pages/Performance.dart';
+import 'package:day_01/Pages/Personal_Info_Page.dart';
 import 'package:day_01/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -27,7 +29,16 @@ class _ContactInfoState extends State<ContactInfo> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TopAppBar(),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PersonalInfomation(),
+                        ),
+                      );
+                    },
+                    child: TopAppBar()),
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Text(
@@ -147,7 +158,19 @@ class _ContactInfoState extends State<ContactInfo> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 40),
-                  child: BottomButton(buttonname: 'Next'),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Performance(),
+                        ),
+                      );
+                    },
+                    child: BottomButton(
+                      buttonname: 'Next',
+                    ),
+                  ),
                 )
               ],
             ),

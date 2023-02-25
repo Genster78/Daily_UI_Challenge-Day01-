@@ -3,6 +3,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'package:day_01/Pages/Personal_Info_Page.dart';
+
 class BottomButton extends StatelessWidget {
   String buttonname;
   BottomButton({

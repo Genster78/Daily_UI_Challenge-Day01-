@@ -7,6 +7,7 @@ import 'package:day_01/Pages/Landing_page.dart';
 import 'package:day_01/custom_icons_icons.dart';
 import 'package:day_01/progress__icons_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../Components/Pages_Background_Color.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
@@ -18,15 +19,14 @@ class PersonalInfomation extends StatefulWidget {
 }
 
 class _PersonalInfomationState extends State<PersonalInfomation> {
-  get isSelected => [];
-
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
     return Scaffold(
       body: SafeArea(
         child: Stack(
           children: [
-            PageBackgroundColor(),
+            const PageBackgroundColor(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
@@ -59,22 +59,24 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   InputField(
-                      inputname: 'User Name :',
-                      hint: 'Enter your full name',
-                      icons: CustomIcons.icon__person_),
-                  SizedBox(height: 20),
+                    inputname: 'User Name :',
+                    hint: 'Enter your full name',
+                    icons: CustomIcons.icon__person_,
+                  ),
+                  const SizedBox(height: 20),
                   InputField(
-                      inputname: 'Birthday :',
-                      hint: 'Enter your birthday',
-                      icons: CustomIcons.icon__calendar_),
-                  SizedBox(height: 20),
+                    inputname: 'Birthday :',
+                    hint: 'Enter your birthday',
+                    icons: CustomIcons.icon__calendar_,
+                  ),
+                  const SizedBox(height: 20),
                   InputField(
                       inputname: 'NIC :',
                       hint: 'Enter your NIC number',
                       icons: CustomIcons.icon__person_),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ToggleButton(
                     title: 'Gender',
                   ),
@@ -181,15 +183,15 @@ class _PersonalInfomationState extends State<PersonalInfomation> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 40),
                     child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ContactInfo(),
-                            ),
-                          );
-                        },
-                        child: BottomButton(buttonname: 'Next')),
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ContactInfo(),
+                          ),
+                        );
+                      },
+                      child: BottomButton(buttonname: 'Next'),
+                    ),
                   )
                 ],
               ),
